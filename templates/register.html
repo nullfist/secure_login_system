@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Register - SecureAuth{% endblock %}
+
+{% block content %}
+<h2>Create Account</h2>
+<form method="POST">
+    <div class="form-group">
+        <label>Username</label>
+        <input type="text" name="username" required autocomplete="username">
+    </div>
+    <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" name="email" required autocomplete="email">
+    </div>
+    <div class="form-group">
+        <label>Secure Password</label>
+        <input type="password" name="password" required autocomplete="new-password">
+        <small style="color: #8b949e; font-size: 11px;">Min 12 chars: A, a, 1, #</small>
+    </div>
+    <button type="submit">Initialize Identity</button>
+</form>
+<div class="links">
+    Already registered? <a href="{{ url_for('login') }}">Sign in</a>
+</div>
+{% endblock %}

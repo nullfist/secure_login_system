@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}2FA Verification - SecureAuth{% endblock %}
+
+{% block content %}
+<h2>MFA Required</h2>
+<p style="text-align: center; color: #8b949e; font-size: 14px;">Enter the 6-digit code from your authenticator app.</p>
+<form method="POST" style="margin-top: 20px;">
+    <div class="form-group">
+        <input type="text" name="token" required placeholder="000000" pattern="[0-9]{6}" inputmode="numeric" style="text-align: center; font-size: 24px; letter-spacing: 5px;">
+    </div>
+    <button type="submit">Verify Token</button>
+</form>
+<div class="links">
+    <a href="{{ url_for('login') }}">Back to Login</a>
+</div>
+{% endblock %}
