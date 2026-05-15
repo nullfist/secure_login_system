@@ -34,7 +34,7 @@ Developed by **Syed**.
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/Syed/secure-login.git
+git clone https://github.com/nullfist/secure-login.git
 cd secure-login
 python -m venv venv
 source venv/bin/activate # Windows: venv\Scripts\activate
